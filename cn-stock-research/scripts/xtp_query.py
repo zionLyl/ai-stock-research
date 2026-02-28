@@ -56,7 +56,7 @@ def main():
     trader.SetSoftwareKey(key)
     
     sid = trader.Login(
-        xtp.get("trade_server", "122.112.139.0"),
+        xtp.get("trade_server", "YOUR_TRADE_SERVER"),
         xtp.get("trade_port", 6104),
         xtp.get("account", "YOUR_XTP_ACCOUNT"),
         password,

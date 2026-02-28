@@ -95,7 +95,7 @@ def get_account() -> dict:
     """查询账户资金"""
     cfg = _load_xtp_config()
     account = cfg.get("account", "YOUR_XTP_ACCOUNT")
-    server = cfg.get("trade_server", "122.112.139.0")
+    server = cfg.get("trade_server", "YOUR_TRADE_SERVER")
     port = cfg.get("trade_port", 6104)
 
     script = f'''
@@ -140,7 +140,7 @@ def get_positions() -> list:
     """查询持仓"""
     cfg = _load_xtp_config()
     account = cfg.get("account", "YOUR_XTP_ACCOUNT")
-    server = cfg.get("trade_server", "122.112.139.0")
+    server = cfg.get("trade_server", "YOUR_TRADE_SERVER")
     port = cfg.get("trade_port", 6104)
 
     script = f'''
@@ -217,7 +217,7 @@ def _place_single_order(symbol: str, side: str, quantity: int,
                         price: float, market: int) -> dict:
     cfg = _load_xtp_config()
     account = cfg.get("account", "YOUR_XTP_ACCOUNT")
-    server = cfg.get("trade_server", "122.112.139.0")
+    server = cfg.get("trade_server", "YOUR_TRADE_SERVER")
     port = cfg.get("trade_port", 6104)
 
     side_code = 1 if side == "buy" else 2
