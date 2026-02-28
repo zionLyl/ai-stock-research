@@ -1,0 +1,130 @@
+{
+  "market": "CN",
+  "holdings": [],
+  "candidates": [
+    "002460"
+  ],
+  "watchlist": [],
+  "report_extras": [],
+  "stop_loss": {},
+  "targets": {
+    "doubling_target_cny": 200000
+  },
+  "account": {
+    "currency": "CNY",
+    "type": "simulation",
+    "broker": "zts_xtp"
+  },
+  "xtp": {
+    "account": "YOUR_XTP_ACCOUNT",
+    "trade_server": "YOUR_TRADE_SERVER",
+    "trade_port": 6104,
+    "quote_server": "YOUR_QUOTE_SERVER",
+    "quote_port": 6002,
+    "_password_note": "XTP_PASSWORD 和 XTP_KEY 从环境变量读取，不在配置中存储"
+  },
+  "macro_indicators": [
+    "上证指数",
+    "沪深300",
+    "中证500",
+    "北向资金",
+    "融资融券",
+    "LPR",
+    "社融"
+  ],
+  "archive": {
+    "enabled": true,
+    "dir": "/tmp/openclaw-archive-cn"
+  },
+  "price_limit_rules": {
+    "主板": 0.1,
+    "创业板": 0.1,
+    "科创板": 0.2,
+    "北交所": 0.3,
+    "ST": 0.05
+  },
+  "research_sources": {
+    "whitelist": [
+      "eastmoney.com",
+      "10jqka.com.cn",
+      "cninfo.com.cn",
+      "sse.com.cn",
+      "szse.cn",
+      "csrc.gov.cn",
+      "pbc.gov.cn",
+      "stats.gov.cn",
+      "cls.cn",
+      "yicai.com",
+      "caixin.com"
+    ],
+    "blacklist": [
+      "scribd.com"
+    ],
+    "min_trusted_ratio": 0.6
+  },
+  "scoring_weights": {
+    "growth": 0.25,
+    "valuation": 0.2,
+    "capital_flow": 0.15,
+    "catalyst": 0.15,
+    "technical": 0.1,
+    "conviction": 0.15
+  },
+  "scoring_thresholds": {
+    "growth": {
+      "excellent": 50,
+      "good": 30,
+      "ok": 15,
+      "weak": 5
+    },
+    "valuation": {
+      "excellent": 0.5,
+      "good": 0.8,
+      "ok": 1.2,
+      "weak": 2.0
+    },
+    "capital_flow": {
+      "strong_inflow_m": 100,
+      "mild_inflow_m": 20,
+      "mild_outflow_m": -20,
+      "strong_outflow_m": -100
+    },
+    "catalyst": {
+      "earnings_soon_days": 7,
+      "earnings_window_days": 14
+    },
+    "technical": {
+      "rsi_oversold": 30,
+      "rsi_neutral": 45,
+      "rsi_hot": 70,
+      "sma_positive_pct": 5
+    },
+    "conviction": {
+      "excellent": 90,
+      "good": 75,
+      "ok": 60,
+      "weak": 45
+    }
+  },
+  "candidate_engine": {
+    "enabled": true,
+    "max_candidates": 3,
+    "max_watchlist": 10,
+    "promote_score": 4.1,
+    "demote_score": 3.8,
+    "watchlist_min_score": 3.4,
+    "discovery_limit": 30,
+    "boards": [
+      "主板",
+      "科创板",
+      "创业板",
+      "北交所"
+    ],
+    "min_price": 5.0,
+    "max_price": 200.0,
+    "min_market_cap_m": 5000,
+    "exclude_symbols": []
+  },
+  "_comment": "A股投研工具链配置 — 所有脚本从这里读取",
+  "_xtp_note": "XTP 密码和密钥从环境变量 XTP_PASSWORD / XTP_KEY 读取"
+}
